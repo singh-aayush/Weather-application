@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=air" />
+</head>
+
+<body class="body">
+    <video class="background-video" autoplay loop muted>
+        <source id="video-source" src="DEFAULT_URL" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <div class="weatherHeading">
+            <h1>Weather App</h1>
+
+            <img src="/image/weather.png" alt="">
+        </div>
+        <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off">
+        <button onclick="getWeather()">Search</button>
+        <div id="weatherInfo" class="hidden">
+            <h2 id="cityName"></h2>
+            <div class="temperatureDetails">
+                <div class="temperatureContainer iconContainers">
+                    <img src="/image/temperature.png" class="weatherIcons" alt="">
+                    <p id="temperature"></p>
+
+                </div>
+                <div class="humidityContainer iconContainers">
+                    <img src="/image/humidity.png" class="weatherIcons" alt="">
+                    <p id="humidity"></p>
+
+                </div>
+                <div class="windContainer iconContainers">
+                    <img src="/image//wind.png" class="weatherIcons" alt="">
+                    <p id="windSpeed"></p>
+
+                </div>
+                <div class="weatherIcon iconContainers">
+                    <img id="weatherIcon" alt="Weather Icon">
+                    <p id="description"></p>
+                </div>
+            </div>
+            <button onclick="toggleTemperature()" class="toggleButton">Toggle °C/°F</button>
+        </div>
+        <p id="errorMessage" class="hidden"></p>
+    </div>
+    <script src="/index.js">
+
+    </script>
+</body>
+
+</html>
