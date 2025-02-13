@@ -3,7 +3,7 @@ let isCelsius = true;
 async function getWeather() {
   const city = document.getElementById("cityInput").value;
   if (!city) return;
-  const apiKey = "58dfe256cc9e5b3b33a02a62c1533859";
+
   const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
   try {
@@ -41,7 +41,6 @@ async function setBackgroundBasedOnWeather() {
     const imageContainer = document.querySelector(".container");
     const city = document.getElementById("cityInput").value;
 
-    const apiKey = "58dfe256cc9e5b3b33a02a62c1533859";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 
     const response = await fetch(`${url}`);
